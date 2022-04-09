@@ -6,7 +6,7 @@ target 'Weather' do
   use_frameworks!
 
   # Pods for Weather
-  pod 'Moya'
+  pod 'Moya/RxSwift'
   
   pod 'ReactorKit'
   pod 'RxSwift'

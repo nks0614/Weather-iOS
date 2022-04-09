@@ -1,9 +1,10 @@
 PODS:
   - Alamofire (5.4.4)
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
   - ReactorKit (3.1.0):
     - RxSwift (~> 6.0)
     - WeakMapTable (~> 1.1)
@@ -20,7 +21,7 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
-  - Moya
+  - Moya/RxSwift
   - ReactorKit
   - RxCocoa
   - RxGesture
@@ -50,6 +51,6 @@ SPEC CHECKSUMS:
   SkeletonView: 77079530e1348a72f48b79ae30dcb966c1b18b6a
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: d9e4cdf8c5a0618a7563f8a69f3e36251cf6a5d4
+PODFILE CHECKSUM: 388a59bb9c03e859cbacb8e50e9ed1a4d376df6e
 
 COCOAPODS: 1.10.2
