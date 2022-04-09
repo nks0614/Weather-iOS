@@ -24,21 +24,7 @@ class MainViewController: UIViewController {
         dateFormatter.dateFormat = "HHmm"
         let time: Int = Int(dateFormatter.string(from: nowDate))!
         
-        self.reactor?.action.onNext(.getShortTermWeather(date, getValidTime(time: time), 60, 125))
-    }
-    
-    func getValidTime(time: Int) -> Int {
-        var time = time
-        let min = time % 100
-
-        if min > 30 {
-            time -= time % 100
-        }
-        else {
-            time -= 70 + time % 100
-        }
-        
-        return time
+        self.reactor?.action.onNext(.getShortTermWeather(date, time, 60, 125))
     }
 }
 

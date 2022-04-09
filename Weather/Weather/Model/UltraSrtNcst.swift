@@ -1,25 +1,11 @@
 //
-//  BaseResponse.swift
+//  UltraSrtNcst.swift
 //  Weather
 //
-//  Created by nkstar on 2022/04/06.
+//  Created by nkstar on 2022/04/09.
 //
 
 import Foundation
-
-struct WeatherResponse<T: Codable>: Codable {
-    let response: BaseResponse<T>
-}
-
-struct BaseResponse<T: Codable>: Codable {
-    let header: WeatherHeader
-    let body: T
-}
-
-struct WeatherHeader: Codable {
-    let resultCode: String
-    let resultMsg: String
-}
 
 struct UltraSrtNcst: Codable {
     let dataType: String
@@ -49,4 +35,3 @@ struct UltraSrtNcstItem: Codable {
     let ny: Int
     let obsrValue: String
 }
-
