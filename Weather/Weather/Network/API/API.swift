@@ -13,8 +13,6 @@ enum API {
 
 extension API: TargetType {
     
-    
-    
     var headers: [String : String]? {
         return ["Content-Type": "application/json"]
     }
@@ -50,10 +48,11 @@ extension API: TargetType {
     }
     
     var task: Task {
+        let serviceKey = "0TyMx1Q8WW25XKmCzZvNSdPzBm48gqSw4nTP86UaiojpUbL5M/DWXF9qWTUXB4LMWzR29MIo8JLl5W5YR8jNRA=="
         switch self {
         case .getShortTermWeather(let date, let time, let x, let y):
             let params: [String : Any] = [
-                "serviceKey" : "",
+                "serviceKey" : serviceKey,
                 "pageNo" : 1,
                 "numOfRows" : 1000,
                 "dataType" : "JSON",
